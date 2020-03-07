@@ -1,22 +1,30 @@
 //nav
-nav ul {
+nav{
+  //nested in sass
+
+  ul {
   list-style-type: none;
   display: none;
 }
-nav li {
+
+li {
   background-color: $nlb;
   text-align: center;
   border-bottom: solid 1px $bb;
 }
-nav a {
+ a {
   padding: .6em;
   display: block;
 }
-nav input[type=checkbox] {
+//nested two tiers in sass
+ input[type=checkbox] {
   display: none;
-}
-nav input[type=checkbox]:checked ~ ul.menu {
+
+  [type=checkbox]:checked ~ ul.menu {
   display: block;
+} }
+
+
 }
 .showMenu {
  //accentColor is a variable
@@ -46,19 +54,11 @@ header span {
   header h2 {
       font-size: 2.5em
   }
-  #mainPic {
-      background-image: url(https://via.placeholder.com/400x250);
-      max-width: 400px;
-      height: 250px;
-  }
-  #products li {
-      max-width: 49.5%;
-      float: left;
-  }
-  #products li:nth-child(odd) {
-      margin-right: 1%;
-  }
-  #products:after, #links:after {
+  
+ 
+  
+ 
+  #links:after {
       clear: both;
       content: " ";
       display: block;
@@ -66,25 +66,25 @@ header span {
   #links {
       margin-top: 0;
       padding-bottom: 3em;
-  }
-  #links article {
+ 
+   article {
       width: 20%;
       float: left;
-  }
-  #links article ul {
+  
+     ul {
       display: inline-block;
-  }
-  #links h4 {
+  }}
+   h4 {
       color: #222;
       border-bottom: none;
       padding-bottom: 0;
       font-size: .8em;
   }
-  #links ul a {
+  ul a {
       color: #555;
       font-weight: 400;
       font-size: .8em;
-  }
+  } }
   footer {
       border-top: solid 1px #ccc;
   }

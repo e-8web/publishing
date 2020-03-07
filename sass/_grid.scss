@@ -32,7 +32,8 @@
       //this align is defined above
             vertical-align: $align;
     }
-  //and this uses an ambersand
+  //and this uses an ambersand and this media query uses a math feature of sass
+  
     &.fluid { width: percentage($col/$sum); }
   }
   

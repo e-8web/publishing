@@ -6,6 +6,7 @@ body {
   background-color: $bb;
   color: $seaColor;
   font-family: sans-serif;
+  padding: 16px;
 }
 
 
@@ -18,7 +19,7 @@ body {
 {background-color: $seaColor;
 color: black;}
 .b1
-//function built in sass color darken
+//function built, modify color in way can not easily do CSS, in sass color darken
 {background-color: darken($seaBackground, $amount: 15);}
 
 .container
@@ -47,10 +48,10 @@ margin: 1em;}
 
 .containeror {
   padding: 2em; 
-  //function built in sass color lighten
+  //function built in sass color lighten, //function built, modify color in way can not easily do CSS, in sass color darken
   background-color: lighten($seaGreen, $amount: 35)}
 
-  .footer
+ 
   
   h1{
     padding: 3em;
@@ -64,6 +65,7 @@ margin: 1em;}
 
    p
   {padding-top: 1em;
+  //@ extend
 @extend h1;
   }
 
@@ -71,11 +73,59 @@ margin: 1em;}
   article{
     margin-top: 2em;
   }
-  
+  $breakpoint-tablet: 650px;
+  @media (min-width: $breakpoint-tablet) {
+    
+  	$media-queries: (
+		tablet: (
+			breakpoint: '(min-width: 480px) and (max-width: 768px)',
+		),
+		mobile: (
+			breakpoint: '(max-width: 480px)'
+		)
+	);
 
+/*
+  ****
+  Create the SASS Mixin
+  ****
+*/
+// Map and @if statement, media screen
+// https://codepen.io/madebyshape/pen/eNENzL
+	@mixin media-query ($size) {
 
+		@each $item, $value in $media-queries {
 
+			@if $item == $size {
 
+				@if map-get($value, breakpoint) != null {
 
+					@media only screen and #{map-get($value, breakpoint)} {
 
-  
+						@content;
+
+					}
+
+				}
+
+			}
+
+		}
+
+  }
+  footer {
+	
+	
+		@include media-query(tablet) {
+			background:$seaBackground;
+   
+ footer  {
+		display:inline-block;
+		width: 100%;
+		font-size: 1.4rem;
+		text-align: center;
+		padding: 4% 10%;
+		box-sizing: border-box;
+	}
+
+} } }
