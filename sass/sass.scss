@@ -22,13 +22,20 @@ color: black;}
 {background-color: darken($seaBackground, $amount: 15);}
 
 .container
-{padding: 2em;}
+{padding: 3em;}
 
 .containerm 
 {
-  padding: 5em;
+  padding: 6em;
 
 }
+.body 
+{padding-right: 2em;
+padding-left: 2em;}
+
+.h2
+{padding: 3em;
+margin: 1em;}
 
 .containerpr{
    padding: 4em;}
@@ -60,7 +67,7 @@ color: black;}
 @extend h1;
   }
 
-  
+
   article{
     margin-top: 2em;
   }

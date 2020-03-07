@@ -49,11 +49,21 @@ h2 {
 }
 
 .container {
-  padding: 2em;
+  padding: 3em;
 }
 
 .containerm {
-  padding: 5em;
+  padding: 6em;
+}
+
+.body {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+.h2 {
+  padding: 3em;
+  margin: 1em;
 }
 
 .containerpr {
