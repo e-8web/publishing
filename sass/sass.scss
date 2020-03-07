@@ -1,0 +1,74 @@
+@import "variables";
+body {
+  margin: 0 auto;
+  
+
+  background-color: $bb;
+  color: $seaColor;
+  font-family: sans-serif;
+}
+
+
+
+
+
+@import "grid";
+
+.b2
+{background-color: $seaColor;
+color: black;}
+.b1
+//function built in sass color darken
+{background-color: darken($seaBackground, $amount: 15);}
+
+.container
+{padding: 2em;}
+
+.containerm 
+{
+  padding: 5em;
+
+}
+
+.containerpr{
+   padding: 4em;}
+
+
+
+//import
+@import "headernav";
+
+.containeror {
+  padding: 2em; 
+  //function built in sass color lighten
+  background-color: lighten($seaGreen, $amount: 35)}
+
+  .footer
+  
+  h1{
+    padding: 3em;
+    margin: 2em;
+  }
+
+  .image {
+    width: 100%;
+  height: auto
+  }
+
+   p
+  {padding-top: 1em;
+@extend h1;
+  }
+
+  
+  article{
+    margin-top: 2em;
+  }
+  
+
+
+
+
+
+
+  
